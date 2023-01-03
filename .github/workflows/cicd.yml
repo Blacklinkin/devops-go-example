@@ -59,8 +59,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: |
-            ghcr.io/Blacklinkin/devops-go-example:${{ env.GITHUB_SHA }}
+          tags: ghcr.io/Blacklinkin/devops-go-example:${{ env.GITHUB_SHA }}
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
